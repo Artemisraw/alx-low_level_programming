@@ -2,15 +2,15 @@
 #include <stdio.h>
 
 /**
- *
- * mul(int a, int b) - calculate the multiples of two intrgers
- *
- * @a - variable from main funtion
- * @b - variable from main funtion
- *
- */
-
+* mul - function that multiplies two integers
+* @a: First integer
+* @b: Second integer
+* Return: mul.
+*/
 int mul(int a, int b)
 {
-	return (a * b);
+	int x;
+
+	x = a * b;
+return (x);
 }

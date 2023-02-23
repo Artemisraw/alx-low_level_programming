@@ -1,19 +1,15 @@
 #include <stdio.h>
-
 /**
- *
- * main - prints numbers from 1 - 100 followed by a new line but for multiples of 3 print fizz and multiples of 5 print buzz
- * multiples of both 5 an d 3 print fizz buzz
- *
- */
-
+* main - main code
+* @void: no output
+* Return: 0 Success
+*/
 int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 100; i++)
-	{
-		if( i % 15 == 0)
+	for (i = 1; i < 100; i++)
+		if (i % 15 == 0)
 		{
 			printf("FizzBuzz ");
 		}
@@ -21,7 +17,7 @@ int main(void)
 		{
 			printf("Buzz ");
 		}
-		else if ( i % 3 == 0)
+		else if (i % 3 == 0)
 		{
 			printf("Fizz ");
 		}
@@ -29,10 +25,7 @@ int main(void)
 		{
 			printf("%d ", i);
 		}
-	}
-	
+	printf("Buzz");
 	printf("\n");
-
 	return (0);
 }
-
