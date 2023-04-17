@@ -24,23 +24,23 @@ int main(int argc, char **argv)
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]), exit(99);
 	bt1 = read(fd1, buff, BUFFER);
-	if (bt1 == -1)
+	if (bt1 == -1){
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98); 
+		exit(98);} 
 	while (bt1 > 0)
 	{
 		bt2 = write(fd2, buff, bt1);
-		if (bt2 == -1)
+		if (bt2 == -1){
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
+			exit(99);}
 		bt1 = read(fd1, buff, BUFFER);
-		if (bt1 == -1)
+		if (bt1 == -1){
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
+			exit(98);}
 	}
-	if (close(fd1) < 0)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1), exit(100);
-	if (close(fd2) < 0)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2), exit(100);
+	if (close(fd1) < 0){
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1), exit(100);}
+	if (close(fd2) < 0){
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2), exit(100);}
 	return (0);
 }
