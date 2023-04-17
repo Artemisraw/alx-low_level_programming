@@ -1,5 +1,6 @@
 #ifndef MAIN_H_
-#define mAIN_H_
+#define MAIN_H_
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <fcntl.h>

@@ -7,6 +7,7 @@
  * @argv: Muldimensional array of arguments
  * Return: Always 0 (Success)
  */
+
 int main(int argc, char **argv)
 {
 	int fd1, fd2, bt1, bt2;
@@ -42,11 +43,15 @@ int main(int argc, char **argv)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
-OAOAOAOAOAOAOAOAOA		}
-OAOAOAOAOAOAOAOAOA	}
+		}
+	}
 	if (close(fd1) < 0)
-OAOAOAOAOAOAOAOAOA		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1), exit(100);
-OAOAOAOAOAOAOAOAOA	if (close(fd2) < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1), exit(100);
+	}
+	if (close(fd2) < 0)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2), exit(100);
-OAOAOAOAOAOAOAOAOA	return (0);
+	}
+	return (0);
 }
